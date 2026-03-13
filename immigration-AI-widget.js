@@ -372,14 +372,14 @@
 
   function buildProductCards(keywords){
     if(!keywords || keywords.length === 0){ return ''; }
-    var html = '<div class="io-products"><span class="io-prod-label">&#128218; Helpful Books &amp; Resources on Amazon</span>';
+    var html = '<div class="io-products">';
     for(var i = 0; i < keywords.length; i++){
       var kw = keywords[i];
       var displayName = kw.replace(/\b\w/g, function(c){ return c.toUpperCase(); });
       html += '<a href="' + amazonUrl(kw) + '" target="_blank" rel="noopener" class="io-product-card">';
       html += '<span class="io-product-icon">&#128218;</span>';
       html += '<div class="io-product-info"><span class="io-product-name">' + displayName + '</span>';
-      html += '<span class="io-product-desc"></span></div>';
+      html += '</div>';
       html += '<span class="io-product-cta">View &rarr;</span></a>';
     }
     html += '</div>';
