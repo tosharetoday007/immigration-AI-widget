@@ -379,7 +379,7 @@
       html += '<a href="' + amazonUrl(kw) + '" target="_blank" rel="noopener" class="io-product-card">';
       html += '<span class="io-product-icon">&#128218;</span>';
       html += '<div class="io-product-info"><span class="io-product-name">' + displayName + '</span>';
-      html += '<span class="io-product-desc">Find on Amazon</span></div>';
+      html += '<span class="io-product-desc"></span></div>';
       html += '<span class="io-product-cta">View &rarr;</span></a>';
     }
     html += '</div>';
