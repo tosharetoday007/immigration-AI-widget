@@ -1,0 +1,70 @@
+/* ImmigrationOpportunity.com AI Widget CSS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+.io-ai-wrap { font-family:Lato,sans-serif; max-width:780px; margin:56px auto 0; background:#fff; border:1px solid #c2d4e8; border-top:5px solid #1a5fa8; border-radius:20px; overflow:hidden; box-shadow:0 8px 48px rgba(20,50,100,0.11); }
+
+.io-ai-header { background:linear-gradient(135deg,#e8f0fb 0%,#d4e4f7 100%); padding:24px 30px 20px; display:flex; align-items:center; gap:16px; border-bottom:1px solid #c2d4e8; }
+.io-ai-avatar { width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#1a5fa8,#2e86de); display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0; box-shadow:0 4px 14px rgba(26,95,168,0.35); animation:ioPulse 3s infinite; }
+@keyframes ioPulse { 0%,100%{ box-shadow:0 4px 14px rgba(26,95,168,0.35); } 50%{ box-shadow:0 4px 22px rgba(26,95,168,0.6); } }
+.io-ai-header-text h3 { font-family:'Playfair Display',serif; font-size:18px; color:#0d2d5e; margin-bottom:3px; }
+.io-ai-header-text p { font-size:12px; color:#2a5a8c; }
+.io-ai-status { margin-left:auto; display:flex; align-items:center; gap:6px; font-size:11px; font-weight:700; color:#4caf7d; letter-spacing:.5px; text-transform:uppercase; }
+.io-ai-dot { width:8px; height:8px; border-radius:50%; background:#4caf7d; animation:ioBlink 1.8s infinite; }
+@keyframes ioBlink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+.io-suggestions { padding:14px 30px 10px; background:#f5f9ff; border-bottom:1px solid #ddeaf7; }
+.io-sug-label { font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#2a5a8c; margin-bottom:10px; display:block; }
+.io-sug-pills { display:flex; flex-wrap:wrap; gap:7px; }
+.io-sug-pill { background:#fff; border:1px solid #c2d4e8; border-radius:50px; padding:6px 14px; font-size:12px; color:#1a5fa8; font-weight:700; cursor:pointer; transition:all .2s; white-space:nowrap; }
+.io-sug-pill:hover { background:#1a5fa8; color:#fff; border-color:#1a5fa8; }
+
+.io-chat-area { height:340px; overflow-y:auto; padding:22px 30px; display:flex; flex-direction:column; gap:16px; scroll-behavior:smooth; background:#f5f9ff; }
+.io-chat-area::-webkit-scrollbar { width:5px; }
+.io-chat-area::-webkit-scrollbar-track { background:#ddeaf7; border-radius:10px; }
+.io-chat-area::-webkit-scrollbar-thumb { background:#1a5fa8; border-radius:10px; }
+
+.io-msg { display:flex; gap:10px; animation:ioMsgIn .3s ease; }
+@keyframes ioMsgIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+.io-msg.user { flex-direction:row-reverse; }
+.io-msg-avatar { width:34px; height:34px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:15px; }
+.io-msg.ai .io-msg-avatar { background:linear-gradient(135deg,#1a5fa8,#2e86de); }
+.io-msg.user .io-msg-avatar { background:#0d2d5e; }
+.io-msg-bubble { max-width:78%; padding:12px 16px; border-radius:16px; font-size:14px; line-height:1.65; color:#0d2d5e; }
+.io-msg.ai .io-msg-bubble { background:#fff; border:1px solid #c2d4e8; border-bottom-left-radius:4px; }
+.io-msg.user .io-msg-bubble { background:linear-gradient(135deg,#1a5fa8,#2e86de); color:#fff; border-bottom-right-radius:4px; }
+
+.io-typing .io-msg-bubble { background:#fff; border:1px solid #c2d4e8; padding:14px 18px; }
+.io-typing-dots { display:flex; gap:5px; align-items:center; }
+.io-typing-dots span { width:7px; height:7px; background:#1a5fa8; border-radius:50%; animation:ioDot 1.2s infinite; display:inline-block; }
+.io-typing-dots span:nth-child(2) { animation-delay:.2s; }
+.io-typing-dots span:nth-child(3) { animation-delay:.4s; }
+@keyframes ioDot { 0%,80%,100%{transform:scale(0.7);opacity:.5} 40%{transform:scale(1);opacity:1} }
+
+.io-products { margin-top:12px; display:flex; flex-direction:column; gap:9px; }
+.io-prod-label { font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#2a5a8c; margin-bottom:6px; display:block; }
+.io-product-card { display:flex; align-items:center; gap:12px; background:linear-gradient(135deg,#eef5ff,#e4effe); border:1px solid #c2d4e8; border-left:4px solid #1a5fa8; border-radius:12px; padding:11px 14px; text-decoration:none; transition:all .22s ease; }
+.io-product-card:hover { transform:translateX(4px); box-shadow:0 4px 16px rgba(26,95,168,0.2); border-color:#1a5fa8; }
+.io-product-icon { font-size:22px; flex-shrink:0; }
+.io-product-info { flex:1; min-width:0; }
+.io-product-name { font-size:13px; font-weight:700; color:#0d2d5e; margin-bottom:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block; }
+.io-product-desc { font-size:11px; color:#2a5a8c; display:block; }
+.io-product-cta { background:#1a5fa8; color:#fff; border-radius:50px; padding:5px 12px; font-size:11px; font-weight:700; white-space:nowrap; flex-shrink:0; letter-spacing:.3px; }
+
+.io-input-wrap { padding:16px 30px 20px; background:#fff; border-top:1px solid #c2d4e8; }
+.io-input-row { display:flex; gap:10px; align-items:flex-end; }
+.io-input { flex:1; border:2px solid #c2d4e8; border-radius:14px; padding:12px 16px; font-size:14px; font-family:Lato,sans-serif; color:#0d2d5e; background:#f5f9ff; resize:none; outline:none; transition:border-color .2s; min-height:46px; max-height:120px; line-height:1.5; }
+.io-input:focus { border-color:#1a5fa8; background:#fff; }
+.io-send-btn { width:46px; height:46px; border-radius:50%; border:none; flex-shrink:0; background:linear-gradient(135deg,#1a5fa8,#2e86de); color:#fff; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .2s; box-shadow:0 4px 14px rgba(26,95,168,0.3); }
+.io-send-btn:hover { transform:scale(1.08); box-shadow:0 6px 20px rgba(26,95,168,0.45); }
+.io-send-btn:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+
+.io-disclaimer { font-size:10px; color:#6b8fb5; text-align:center; padding:8px 30px 0; font-style:italic; }
+
+@media(max-width:600px){
+  .io-ai-header { padding:18px 18px 16px; }
+  .io-suggestions { padding:12px 18px 8px; }
+  .io-chat-area { padding:16px 18px; height:300px; }
+  .io-input-wrap { padding:14px 18px 16px; }
+  .io-msg-bubble { max-width:88%; }
+  .io-ai-status { display:none; }
+}
