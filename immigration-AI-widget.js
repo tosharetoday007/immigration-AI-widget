@@ -436,7 +436,8 @@
       headers: { 'Content-Type': 'text/plain' },
       body: JSON.stringify({
         system: systemPrompt,
-        messages: [{ role: 'user', content: userMessage }]
+        messages: [{ role: 'user', content: userMessage }],
+        origin: window.location.hostname
       })
     }).then(function(r){ return r.json(); })
     .then(function(data){
